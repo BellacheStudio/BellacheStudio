@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bellaché Studio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff6f9;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background-color: #d63384;
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #d63384;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      margin-top: 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #a02765;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Gallery styles */
+    #gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(214, 51, 132, 0.3);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    #gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #f2d1e6;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Bellaché Studio Logo" class="logo" />
+    <h1>Welcome to Bellaché Studio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#shop" class="btn">Shop Now</a>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We create handcrafted, beautiful gifts and packaging that make every moment special.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>Custom gifts, elegant packaging, and personalized décor for weddings, birthdays, and more.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <!-- Put your images inside the 'images' folder -->
+    <img src="images/gift1.jpg" alt="Gift 1" />
+    <img src="images/gift2.jpg" alt="Gift 2" />
+    <img src="images/gift3.jpg" alt="Gift 3" />
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Instagram: @bellachestudio<br />Email: bellache@gmail.com</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Bellaché Studio. All rights reserved.
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('section').forEach((section, index) => {
+        setTimeout(() => {
+          section.style.opacity = '1';
+          section.style.transform = 'translateY(0)';
+        }, index * 300);
+      });
+    });
+  </script>
+</body>
+</html>
